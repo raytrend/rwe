@@ -1,0 +1,6 @@
+name: coffeesdk
+version: 1
+
+handle:
+- rewrite:if (!is_file() && !is_dir() && path ~ "^app/webroot/(.*)") goto "app/webroot/index.php?url=$1&%{QUERY_STRING}"
+- rewrite:if (!is_file() && !is_dir() && path ~ "(.*)") goto "app/webroot/$1?%{QUERY_STRING}"

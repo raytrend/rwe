@@ -1,0 +1,17 @@
+#!/bin/sh
+#
+# Lithium: the most rad php framework
+#
+# @copyright     Copyright 2011, Union of RAD (http://union-of-rad.org)
+# @license       http://opensource.org/licenses/bsd-license.php The BSD License
+#
+SELF=$0; test -L $0 && SELF=$(readlink -n $0)
+
+
+if [ -f "${PHP}/etc/php-cli.ini" ]; then
+	echo Ini: ${PHP}/etc/php-cli.ini
+	php -c ${PHP}/etc/php-cli.ini -f $(dirname $SELF)/lithium.php -- "$@"
+else
+	php -f $(dirname $SELF)/lithium.php -- "$@"
+fi
+
