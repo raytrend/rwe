@@ -17,7 +17,7 @@ function environment_config() {
 			}
 
 			if (empty($_SERVER["SERVER_NAME"])) {
-				$_SERVER["SERVER_NAME"] = 'dev.raytrend.qq.com';
+				$_SERVER["SERVER_NAME"] = 'dev.raytrend.oa.com';
 			}
 
 			$_SERVER["HTTP_HOST"] = $_SERVER["SERVER_NAME"];

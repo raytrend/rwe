@@ -6,7 +6,6 @@ use app\extensions\core\Constant;
 use app\extensions\core\Connections;
 
 ini_set("display_errors", 0);
-Constant::set_define('QUEUE_HOST', '10.153.147.144');
 Constant::set_define('ISDEV', false);
 Constant::set_define('DEMO_LOGIN', false);
 Constant::set_define('CACHE', true);
@@ -19,7 +18,7 @@ Connections::add('default', array (
 		'adapter' => 'MySql',
 		'host' => '',
 		'login' => '',
-		'password' => 'DJT@',
+		'password' => '',
 		'database' => '',
 		'encoding' => 'UTF-8'
 ));
@@ -39,7 +38,7 @@ Connections::add('feeds', array (
 		'adapter' => 'MySql',
 		'host' => '',
 		'login' => '',
-		'password' => 'DJT@',
+		'password' => '',
 		'database' => '',
 		'encoding' => 'UTF-8',
 		'persistent' => false
